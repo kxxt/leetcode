@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eux
+
+cargo new "lc-$1" --lib
+
+cd "lc-$1"
+
+cargo add leetcode_prelude
+
+git add .
+
+git commit -m "Initialize $1"
