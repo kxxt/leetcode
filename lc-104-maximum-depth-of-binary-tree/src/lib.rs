@@ -1,4 +1,4 @@
-use handy_leetcode::{paste, test_eq};
+use handy_leetcode::{paste, test_eq, tests};
 use leetcode_prelude::{btree, TreeNode};
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -20,15 +20,11 @@ impl Solution {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
+tests! {
     test_eq!(
         1,
         Solution::max_depth(btree![3, 9, 20, null, null, 15, 7]),
         3
     );
-
     test_eq!(2, Solution::max_depth(btree![1, null, 2]), 2);
 }

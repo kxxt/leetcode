@@ -8,3 +8,14 @@ macro_rules! test_eq {
         }}
     };
 }
+
+#[macro_export]
+macro_rules! tests {
+    ($($t:tt)*) => {
+        #[cfg(test)]
+        mod tests {
+            use super::*;
+            $($t)*
+        }
+    };
+}
