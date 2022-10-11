@@ -7,6 +7,7 @@ cargo new "lc-$1" --lib
 cd "lc-$1"
 
 cargo add leetcode_prelude
+cargo add --path ../handy-leetcode
 
 git add .
 
