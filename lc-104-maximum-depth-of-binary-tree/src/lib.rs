@@ -1,3 +1,4 @@
+use handy_leetcode::{paste, test_eq};
 use leetcode_prelude::{btree, TreeNode};
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -23,13 +24,11 @@ impl Solution {
 mod tests {
     use super::*;
 
-    #[test]
-    fn case1() {
-        assert_eq!(Solution::max_depth(btree![3, 9, 20, null, null, 15, 7]), 3);
-    }
+    test_eq!(
+        1,
+        Solution::max_depth(btree![3, 9, 20, null, null, 15, 7]),
+        3
+    );
 
-    #[test]
-    fn case2() {
-        assert_eq!(Solution::max_depth(btree![1, null, 2]), 2);
-    }
+    test_eq!(2, Solution::max_depth(btree![1, null, 2]), 2);
 }

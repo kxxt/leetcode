@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 leetcode_prelude = "0.2.3"
+handy-leetcode = { path = "../handy-leetcode" }
