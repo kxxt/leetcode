@@ -1,3 +1,4 @@
+use handy_leetcode::{paste, test_eq, tests};
 use leetcode_prelude::{btree, TreeNode};
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -26,34 +27,23 @@ impl Solution {
         Self::build_tree_helper(&preorder, &inorder)
     }
 }
-#[cfg(test)]
-mod tests {
-    use super::*;
+tests! {
+    test_eq!(1,
+        Solution::build_tree(vec![3, 9, 20, 15, 7], vec![9, 3, 15, 20, 7]),
+        btree![3, 9, 20, null, null, 15, 7]
+    );
 
-    #[test]
-    fn case1() {
-        assert_eq!(
-            Solution::build_tree(vec![3, 9, 20, 15, 7], vec![9, 3, 15, 20, 7]),
-            btree![3, 9, 20, null, null, 15, 7]
-        );
-    }
+    test_eq!(2,
+        Solution::build_tree(vec![-1], vec![-1]),
+        btree![-1]
+    );
 
-    #[test]
-    fn case2() {
-        assert_eq!(
-            Solution::build_tree(vec![-1], vec![-1]),
-            btree![-1]
-        );
-    }
-
-    #[test]
-    fn case3() {
-        assert_eq!(
-            Solution::build_tree(
-                vec![1, 2, 4, 8, 5, 3, 6, 9, 7],
-                vec![8, 4, 2, 5, 1, 6, 9, 3, 7]
-            ),
-            btree![1, 2, 3, 4, 5, 6, 7, 8, null, null, null, null, 9]
-        );
-    }
+    test_eq!(
+        3,
+        Solution::build_tree(
+            vec![1, 2, 4, 8, 5, 3, 6, 9, 7],
+            vec![8, 4, 2, 5, 1, 6, 9, 3, 7]
+        ),
+        btree![1, 2, 3, 4, 5, 6, 7, 8, null, null, null, null,9]
+    );
 }
