@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 use handy_leetcode::{paste, test_eq, tests};
 use leetcode_prelude::{btree, TreeNode};
 use std::cell::RefCell;
@@ -28,3 +30,5 @@ tests! {
     );
     test_eq!(2, Solution::max_depth(btree![1, null, 2]), 2);
 }
+
+fn main() {}

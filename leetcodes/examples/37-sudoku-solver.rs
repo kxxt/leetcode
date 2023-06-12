@@ -44,11 +44,11 @@ impl Element for u32 {
 impl Element for char {
     #[inline]
     fn from_integer(i: u32) -> char {
-        return char::from_digit(i, 10).unwrap();
+        char::from_digit(i, 10).unwrap()
     }
     #[inline]
     fn zero() -> char {
-        return '.';
+        '.'
     }
 }
 
