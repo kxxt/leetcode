@@ -1,3 +1,4 @@
+#![allow(unused)]
 use leetcode_prelude::{btree, TreeNode};
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -63,3 +64,5 @@ mod tests {
         assert!(Solution::has_path_sum(btree![1], 1));
     }
 }
+
+fn main() {}

@@ -1,3 +1,4 @@
+#![allow(unused)]
 use handy_leetcode::{paste, test_eq, tests};
 use leetcode_prelude::{btree, TreeNode};
 use std::cell::RefCell;
@@ -47,3 +48,5 @@ tests! {
         btree![1, 2, 3, 4, 5, 6, 7, 8, null, null, null, null,9]
     );
 }
+
+fn main() {}

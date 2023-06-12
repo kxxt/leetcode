@@ -1,7 +1,7 @@
 use std::cell::RefCell;
 use std::rc::Rc;
 
-use leetcode_prelude::{btree, TreeNode};
+use leetcode_prelude::TreeNode;
 
 type Node = Option<Rc<RefCell<TreeNode>>>;
 
@@ -25,6 +25,8 @@ pub fn is_symmetric(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
 
 #[cfg(test)]
 mod test {
+    use leetcode_prelude::btree;
+
     use super::*;
 
     #[test]
@@ -42,3 +44,5 @@ mod test {
         assert!(!is_symmetric(btree![1, 2, 3]));
     }
 }
+
+fn main() {}

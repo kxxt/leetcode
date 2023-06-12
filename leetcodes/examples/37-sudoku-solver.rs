@@ -1,3 +1,4 @@
+#![allow(unused)]
 // PTA
 use std::{
     fmt::{Debug, Display, Write},

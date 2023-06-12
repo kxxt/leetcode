@@ -1,5 +1,5 @@
 [package]
-name = "lc-235-lowest-common-ancestor-of-a-binary-search-tree"
+name = "leetcodes"
 version = "0.1.0"
 edition = "2021"
 

@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 use leetcode_prelude::{btree, TreeNode};
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -57,3 +59,5 @@ mod tests {
         );
     }
 }
+
+fn main() {}

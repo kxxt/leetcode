@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 use handy_leetcode::{paste, test_eq, tests};
 use std::{collections::HashMap, ops::Range};
 
@@ -56,4 +58,9 @@ tests! {
     test_eq!(0, Solution::min_window("ADOBECODEBANC".to_string(),"ABC".to_string()), "BANC");
     test_eq!(1, Solution::min_window("a".to_string(),"aa".to_string()), "");
     test_eq!(2, Solution::min_window("a".to_string(),"a".to_string()), "a");
+}
+
+
+fn main() {
+
 }
