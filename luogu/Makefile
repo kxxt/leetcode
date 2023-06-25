@@ -1,4 +1,7 @@
-.PHONY: new
+.PHONY: new build
+
+build:
+	cmake -Bbuild && cmake --build build
 
 new:
 	@echo "Please input the problem ID:"
